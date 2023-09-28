@@ -6,7 +6,6 @@ function map<T>(
     if (fn(value, index, arr) !== undefined) {
       acc.push(fn(value, index, arr));
     }
-
     return acc;
   }, [] as Array<T>);
 }
