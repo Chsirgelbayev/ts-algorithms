@@ -27,13 +27,11 @@ function merge(firstArr: number[], secondArr: number[]): number[] {
         if(first > second) {
             result.push(second)
             j++
-            continue
         }
 
         if(second > first) {
             result.push(first)
             i++
-            continue
         }
 
     }
