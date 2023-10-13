@@ -1,4 +1,4 @@
-function tree<T>(values: Array<T>, target: unknown, intitalValue: unknown) {
+function tree<T>(values: Array<T>) {
   if (!Array.isArray(values)) {
     values = Object.values(values);
   }
@@ -9,12 +9,12 @@ function tree<T>(values: Array<T>, target: unknown, intitalValue: unknown) {
   while (stack.length) {
     const shift = stack.shift();
 
-    if (typeof shift === 'array') {
-      stack.push(...shift);
+    if (shift.value !== undefined) {
+        result.push(value);
     }
 
-    if (shift[key] === target) {
-      result.push(shift);
+    if (typeof shift === 'object') {
+      stack.push(...shift);
     }
   }
 
